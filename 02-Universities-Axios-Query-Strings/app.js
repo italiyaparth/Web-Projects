@@ -1,4 +1,4 @@
-let url = "http://universities.hipolabs.com/search?country=";
+let url = "www.universities.hipolabs.com/search?country=";
 
 let loadingButton = document.querySelector("#loadingButton");   // for replacing search button with loading button
 loadingButton.style.display = "none";   // for replacing search button with loading button
