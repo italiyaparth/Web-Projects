@@ -79,8 +79,16 @@ async function getColleges(country, university) {
 function show(collegesArray) {
 
     let ul = document.querySelector("#list");
-    ul.innerText = "";  // old data removed
 
+    if (collegesArray == []) {
+        
+        ul.innerText = "No Data Found";
+        
+    } else {
+        
+        ul.innerText = "";  // old data removed
+    }
+    
     for (const college of collegesArray) {
 
         let li = document.createElement("li");  // as per array items new element creation
