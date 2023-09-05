@@ -23,7 +23,7 @@ searchButton.addEventListener("click", async () => {
 /////////      callback for data as per user input    
     
     let oldCollegesArray = await getColleges(country, university);  //  data store in array as per result of callback from API function
-    console.log(oldCollegeArray);
+    console.log(oldCollegesArray);
     let collegesArray = oldCollegesArray.filter( (college) => String(college["state-province"]).toLowerCase().includes(state.toLowerCase()) );  //  as API doesn't have state-province filter, we make our own and store in new data in new array
 
 
