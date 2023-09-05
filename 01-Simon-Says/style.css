@@ -5,7 +5,7 @@ html {
 body {
     text-align: center;
     background-color: bisque;
-    height: 100%;
+    height: fit-content;
 }
 
 .btn-container {
