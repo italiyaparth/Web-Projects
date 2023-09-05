@@ -83,6 +83,7 @@ function show(collegesArray) {
     if (collegesArray == []) {
         
         ul.innerText = "No Data Found";
+        console.log(ul.innerText);
         
     } else {
         
