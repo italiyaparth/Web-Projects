@@ -80,7 +80,7 @@ function show(collegesArray) {
 
     let ul = document.querySelector("#list");
 
-    if (collegesArray == []) {
+    if (collegesArray.length == 0) {
         
         ul.innerText = "No Data Found";
         console.log(ul.innerText);
