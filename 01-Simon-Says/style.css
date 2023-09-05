@@ -6,6 +6,9 @@ body {
     text-align: center;
     background-color: bisque;
     height: fit-content;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-container {
