@@ -1,0 +1,89 @@
+html {
+    height: 100%; /* For fixed body height */
+}
+
+body {
+    background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    padding: 1rem;
+}
+
+.searchedText {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+/* main  */
+
+main {
+    padding: 1rem;
+    flex: 1;  /* main can have remaining space from flex column & it's keeps footer at the bottom */
+
+    height: fit-content; /* main will height will grow to fit content  */
+    overflow-y: auto; /* scroll will appear when content overflows */
+}
+
+/*  data in cards   */
+
+#list {
+    list-style: none;
+}
+
+.card {
+    box-sizing: border-box;
+    margin: 0.5rem 1rem;
+    cursor: pointer;
+    transition: transform 0.5s;  /* Smooth transition for the shrinking effect */
+}
+
+.card:hover{
+    background-color: #00f4ff;
+    
+}
+
+.card:hover .card-link {
+    color: indigo;
+}
+
+/* Keyframes for the shrink and grow animation */
+@keyframes clickShrinkGrow {
+    0%, 100% {
+        transform: scale(1);  /* Start and end at full size */
+    }
+    50% {
+        transform: scale(0.75);  /* Shrink to 95% of the original size in the middle of the animation */
+    }
+}
+
+/* Apply the animation when the card is actively being clicked */
+.card:active {
+    animation: clickShrinkGrow 0.5s forwards;
+}
+
+.card-link {
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    color: blue;
+}
+
+/*  footer   */
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer h3 {
+    text-align: center;
+}
