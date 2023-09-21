@@ -1,0 +1,22 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    color: maroon;
+}
+
+h3, h4 {
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+.user {
+    font-style: italic;
+    color: blue;
+}
+
+.post {
+    background-color: wheat;
+    margin: 1rem 0;
+}
