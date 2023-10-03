@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
+const { v4: uuidv4 } = require("uuid");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname,"/views"));
@@ -34,12 +35,13 @@ let getRandomUser = () => {
   ];
 };
 
+// use only first time then comment out 
 let data = [];
 for (let index = 1; index <= 100; index++) {
   data.push(getRandomUser());
 }
 
-// add data in SQL database server
+// add data in SQL database server, use only first time then comment out 
 let q = "INSERT INTO user (id, username, email, password) VALUES ?";
 try {
   connection.query(q, [data], (err, result) => {
@@ -204,4 +206,30 @@ app.delete("/user/:id", (req, res) => {
     console.log(error);
   }
 
+});
+
+// add new record - new page
+app.get("/user/new", (req, res) => {
+  res.render("new.ejs");
+});
+
+
+// ADD NEW Route
+app.post("/user", (req, res) => {
+  let { username, email, password } = req.body;
+  let id = uuidv4();
+
+  //Query to Insert New User
+  let q = `INSERT INTO user (id, username, email, password) VALUES ('${id}','${username}','${email}','${password}') `;
+
+  try {
+    connection.query(q, (err, result) => {
+
+      if (err) throw err;
+
+      res.redirect("/user");
+    });
+  } catch (err) {
+    res.send("some error occurred");
+  }
 });
