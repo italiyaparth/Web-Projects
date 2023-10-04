@@ -49,8 +49,8 @@ try {
     console.log(result);
   });
 
-} catch (error) {
-  console.log(error);
+} catch (err) {
+  console.log(err);
 }
 
 
@@ -67,8 +67,8 @@ app.get("/", (req, res) => {
       res.render("home.ejs", { count });
     });
   
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err);
   }
 
 });
@@ -86,8 +86,8 @@ app.get("/user", (req, res) => {
       res.render("users.ejs", { users });
     });
   
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err);
   }
 
 });
@@ -107,8 +107,8 @@ app.get("/user/:id/edit", (req, res) => {
       res.render("users.ejs", { user });
     });
   
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err);
   }
 
 });
@@ -144,8 +144,8 @@ app.patch("/user/:id", (req, res) => {
 
     });
   
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err);
   }
 
 });
@@ -165,8 +165,8 @@ app.get("/user/:id/delete", (req, res) => {
       res.render("delete.ejs", { user });
     });
   
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err);
   }
 
 });
@@ -202,8 +202,8 @@ app.delete("/user/:id", (req, res) => {
 
     });
   
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err);
   }
 
 });
