@@ -121,7 +121,7 @@ app.get("/chats/:id/edit", async (req, res) => {
 
 ////////////////////////////// Start - Edit Route - Update chat in DB
 
-app.put("/chats/:id", async (req, res) => {
+app.patch("/chats/:id", async (req, res) => {
 
   let { id } = req.params;
   let { msg: newMsg } = req.body;
