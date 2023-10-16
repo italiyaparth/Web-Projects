@@ -22,7 +22,7 @@ app.use(methodOverride("_method"));
 ////////////////////////////// Start - MongoDB Connection
 
 main()
-.then(() => console.log("MongoDB connection successfull"))
+.then(() => console.log("MongoDB connection successful"))
 .catch((err) => console.log("MongoDB connection error"));
 
 async function main() {
