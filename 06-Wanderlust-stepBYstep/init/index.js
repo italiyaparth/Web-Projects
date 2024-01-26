@@ -3,7 +3,8 @@ const initData = require("./data.js");      // Step 3
 const Listing = require("../models/listing.js");     
 
 // Step 3
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+const MONGO_URL = process.env.ATLASDB_URL;   // Step 54
 
 // Step 3
 async function main() {
